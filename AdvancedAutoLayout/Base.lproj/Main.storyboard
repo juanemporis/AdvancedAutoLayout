@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arz-cW-Xtb">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="371"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="247.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constrain De Posicion">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
@@ -30,13 +30,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-ch-2ik">
-                                        <rect key="frame" x="0.0" y="371" width="382" height="371"/>
+                                        <rect key="frame" x="0.0" y="247.5" width="382" height="247"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constrain de altura y anchura">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="cgH-8l-qtN" kind="show" id="sD4-fs-Qqc"/>
+                                            <segue destination="cgH-8l-qtN" kind="show" id="JTd-RR-Vgx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmg-T8-cyI">
+                                        <rect key="frame" x="0.0" y="494.5" width="382" height="247.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Modificar contrains por codigo">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="e1X-3i-WNc" kind="show" id="4D7-k7-y3Q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -55,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36.231884057971016" y="549.77678571428567"/>
+            <point key="canvasLocation" x="-42" y="550"/>
         </scene>
         <!--Contrain de Posicion-->
         <scene sceneID="w9i-zM-1uw">
@@ -103,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-4p-Rer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="149"/>
+            <point key="canvasLocation" x="1112" y="-238"/>
         </scene>
         <!--Contrain de altura y anchura-->
         <scene sceneID="l6I-fM-ZFf">
@@ -133,7 +143,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVA-UR-5re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="932"/>
+            <point key="canvasLocation" x="1112" y="432"/>
+        </scene>
+        <!--Modificar Constrain por codigo-->
+        <scene sceneID="lbJ-Cv-Edu">
+            <objects>
+                <viewController title="Modificar Constrain por codigo" id="e1X-3i-WNc" customClass="ModifyContraintsViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bVL-8g-ofJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-Od-Zsd">
+                                <rect key="frame" x="16" y="104" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XSZ-C2-gKD"/>
+                                    <constraint firstAttribute="width" constant="100" id="eUs-Ek-8o2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jvj-9z-e8k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d4M-Od-Zsd" firstAttribute="top" secondItem="Jvj-9z-e8k" secondAttribute="top" constant="16" id="E9e-oj-yj5"/>
+                            <constraint firstItem="d4M-Od-Zsd" firstAttribute="leading" secondItem="Jvj-9z-e8k" secondAttribute="leading" constant="16" id="KMh-Pq-T48"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Modificar constraints por codigo" id="2Po-3X-Coy"/>
+                    <connections>
+                        <outlet property="heightConstraint" destination="eUs-Ek-8o2" id="2lF-Mz-p45"/>
+                        <outlet property="topConstraint" destination="eUs-Ek-8o2" id="Sgg-dU-7Gg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSU-yB-gPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="1104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhm-OC-bEj">
