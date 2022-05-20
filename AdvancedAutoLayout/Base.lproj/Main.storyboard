@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arz-cW-Xtb">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="185.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constrain De Posicion">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-ch-2ik">
-                                        <rect key="frame" x="0.0" y="247.5" width="382" height="247"/>
+                                        <rect key="frame" x="0.0" y="185.5" width="382" height="185.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constrain de altura y anchura">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
@@ -40,13 +40,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmg-T8-cyI">
-                                        <rect key="frame" x="0.0" y="494.5" width="382" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="371" width="382" height="185.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Modificar contrains por codigo">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="e1X-3i-WNc" kind="show" id="4D7-k7-y3Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-tw-5Py">
+                                        <rect key="frame" x="0.0" y="556.5" width="382" height="185.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Crear constraints por codigo">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="EQY-Om-n3h" kind="show" id="TJ1-E2-6DL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -66,6 +76,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42" y="550"/>
+        </scene>
+        <!--Constraints por Codigo-->
+        <scene sceneID="8YF-f9-IGe">
+            <objects>
+                <viewController id="EQY-Om-n3h" customClass="CreateConstraintsViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qqa-58-9kl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-Bt-TeU">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YNx-Ww-CTJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Constraints por Codigo" id="MUx-Ma-Gr4"/>
+                    <connections>
+                        <outlet property="yellowView" destination="R3w-Bt-TeU" id="pJ1-kK-6pe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0X-84-aO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="550"/>
         </scene>
         <!--Contrain de Posicion-->
         <scene sceneID="w9i-zM-1uw">
@@ -113,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-4p-Rer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="-238"/>
+            <point key="canvasLocation" x="736" y="-238"/>
         </scene>
         <!--Contrain de altura y anchura-->
         <scene sceneID="l6I-fM-ZFf">
@@ -143,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVA-UR-5re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="432"/>
+            <point key="canvasLocation" x="1517" y="-238"/>
         </scene>
         <!--Modificar Constrain por codigo-->
         <scene sceneID="lbJ-Cv-Edu">
@@ -177,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSU-yB-gPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="1104"/>
+            <point key="canvasLocation" x="2383" y="-238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhm-OC-bEj">
@@ -211,6 +247,9 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
