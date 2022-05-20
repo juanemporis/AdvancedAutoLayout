@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Auto Layout Avanzado-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Auto Layout Avanzado" id="BYZ-38-t0r" customClass="ViewController" customModule="AdvancedAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,9 +22,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arz-cW-Xtb">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="742"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                        <buttonConfiguration key="configuration" style="plain" title="Constrain De Posicion">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Rlj-as-xVy" kind="show" id="jdX-LH-ePm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -38,11 +41,59 @@
                             <constraint firstItem="ntL-pm-B2p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="vpc-0q-f88"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="irz-Es-vhj"/>
+                    <navigationItem key="navigationItem" title="Auto Layout de Posicion" id="irz-Es-vhj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-36.231884057971016" y="549.77678571428567"/>
+        </scene>
+        <!--Contrain de Posicion-->
+        <scene sceneID="w9i-zM-1uw">
+            <objects>
+                <viewController title="Contrain de Posicion" id="Rlj-as-xVy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sSu-0n-w4w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJM-AV-8Ku">
+                                <rect key="frame" x="0.0" y="88" width="414" height="374"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9d-3j-FY6">
+                                        <rect key="frame" x="100" y="100" width="214" height="324"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="b9d-3j-FY6" secondAttribute="bottom" constant="-50" id="AhH-kf-1a1"/>
+                                    <constraint firstAttribute="trailing" secondItem="b9d-3j-FY6" secondAttribute="trailing" constant="100" id="ShN-HD-c50"/>
+                                    <constraint firstItem="b9d-3j-FY6" firstAttribute="top" secondItem="vJM-AV-8Ku" secondAttribute="top" constant="100" id="SjH-N6-hVC"/>
+                                    <constraint firstItem="b9d-3j-FY6" firstAttribute="leading" secondItem="vJM-AV-8Ku" secondAttribute="leading" constant="100" id="lPl-rz-xCk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJv-Z0-xTH">
+                                <rect key="frame" x="16" y="476" width="57" height="402"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vlq-YJ-8Ah"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="SJv-Z0-xTH" secondAttribute="bottom" constant="-16" id="03V-lm-EJ6"/>
+                            <constraint firstItem="vlq-YJ-8Ah" firstAttribute="trailing" secondItem="vJM-AV-8Ku" secondAttribute="trailing" id="5Aj-YM-RbH"/>
+                            <constraint firstItem="vJM-AV-8Ku" firstAttribute="top" secondItem="vlq-YJ-8Ah" secondAttribute="top" id="5JB-rx-zYJ"/>
+                            <constraint firstItem="SJv-Z0-xTH" firstAttribute="top" secondItem="vJM-AV-8Ku" secondAttribute="bottom" constant="14" id="815-M1-XSd"/>
+                            <constraint firstItem="b9d-3j-FY6" firstAttribute="leading" secondItem="SJv-Z0-xTH" secondAttribute="trailing" constant="27" id="Mc3-hE-lGI"/>
+                            <constraint firstItem="vJM-AV-8Ku" firstAttribute="leading" secondItem="vlq-YJ-8Ah" secondAttribute="leading" id="cMb-uv-f9f"/>
+                            <constraint firstItem="SJv-Z0-xTH" firstAttribute="leading" secondItem="vlq-YJ-8Ah" secondAttribute="leading" constant="16" id="dZF-7K-bWP"/>
+                            <constraint firstItem="vlq-YJ-8Ah" firstAttribute="bottom" secondItem="vJM-AV-8Ku" secondAttribute="bottom" constant="400" id="g67-XU-n5u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b0y-Gy-LP7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-4p-Rer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786.95652173913049" y="549.77678571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhm-OC-bEj">
@@ -64,6 +115,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
