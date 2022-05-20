@@ -16,17 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ntL-pm-B2p">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ntL-pm-B2p">
                                 <rect key="frame" x="16" y="104" width="382" height="742"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arz-cW-Xtb">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="742"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="371"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Constrain De Posicion">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="Rlj-as-xVy" kind="show" id="jdX-LH-ePm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-ch-2ik">
+                                        <rect key="frame" x="0.0" y="371" width="382" height="371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Constrain de altura y anchura">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="cgH-8l-qtN" kind="show" id="sD4-fs-Qqc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -93,7 +103,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI0-4p-Rer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786.95652173913049" y="549.77678571428567"/>
+            <point key="canvasLocation" x="1129" y="149"/>
+        </scene>
+        <!--Contrain de altura y anchura-->
+        <scene sceneID="l6I-fM-ZFf">
+            <objects>
+                <viewController id="cgH-8l-qtN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZU-4d-DTU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTs-fF-2ib">
+                                <rect key="frame" x="16" y="104" width="200" height="300"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="YNP-bF-3SX"/>
+                                    <constraint firstAttribute="width" constant="200" id="cDs-RV-mTT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YfZ-OP-XKJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WTs-fF-2ib" firstAttribute="top" secondItem="YfZ-OP-XKJ" secondAttribute="top" constant="16" id="5uV-vK-Ueh"/>
+                            <constraint firstItem="WTs-fF-2ib" firstAttribute="leading" secondItem="YfZ-OP-XKJ" secondAttribute="leading" constant="16" id="WED-Wp-fW3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contrain de altura y anchura" id="n8g-T5-z5V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVA-UR-5re" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="932"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhm-OC-bEj">
@@ -121,6 +161,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
